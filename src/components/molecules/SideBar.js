@@ -21,8 +21,9 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: "50px",
-    width: "200px",
+    // marginLeft: "50px",
+    // marginTop: "50px",
+    // width: "200px",
     square: "false",
   },
   text: {
