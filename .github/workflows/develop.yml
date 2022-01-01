@@ -44,11 +44,8 @@ jobs:
   #   - run: npm test
 
   Notification:
-    steps:
     - uses: sarisia/actions-status-discord@v1
-    - name: Notification
       if: always()
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         username: Github Actions (Topic)
-        status: ${{ job.status }}
