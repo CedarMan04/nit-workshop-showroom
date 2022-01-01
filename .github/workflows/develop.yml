@@ -46,6 +46,8 @@ jobs:
   Notification:
     - uses: sarisia/actions-status-discord@v1
       if: always()
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
         username: Github Actions (Topic)
+        status: ${{ job.status }}
