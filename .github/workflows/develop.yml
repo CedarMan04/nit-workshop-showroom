@@ -45,10 +45,11 @@ jobs:
 
   Notification:
     runs-on: ubuntu-latest
+    needs: [Lint]
     steps:
     - uses: sarisia/actions-status-discord@v1
       if: always()
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         username: Github Actions (Topic)
-        status: ${{ job.status }}
+        status: ${{ needs.*.result }}
