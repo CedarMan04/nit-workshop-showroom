@@ -22,7 +22,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run eslint
-    - run: npm run test
+    # TODO テスト追加次第、以下を実行させる
+    # - run: npm run test
     
   # build:
 
