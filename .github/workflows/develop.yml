@@ -10,7 +10,7 @@ jobs:
   Lint:
     runs-on: ubuntu-latest
     strategy:
-      node-version: 16.x
+      node-version: '16.x'
     
     steps:
     - uses: actions/checkout@v2
