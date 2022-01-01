@@ -44,6 +44,7 @@ jobs:
   #   - run: npm test
 
   Notification:
+    steps:
     - uses: sarisia/actions-status-discord@v1
     - name: Notification
       if: always()
