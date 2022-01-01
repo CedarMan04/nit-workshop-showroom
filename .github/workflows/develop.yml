@@ -9,19 +9,19 @@ jobs:
   # TODO AWSのコンテナサービス上にbuildできるようにする
   Lint:
     runs-on: ubuntu-latest
-      strategy:
-        node-version: 16.x
-      
-      steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ strategy.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ strategy.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run eslint
-      - run: npm run test
+    strategy:
+      node-version: 16.x
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ strategy.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ strategy.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run eslint
+    - run: npm run test
     
   # build:
 
