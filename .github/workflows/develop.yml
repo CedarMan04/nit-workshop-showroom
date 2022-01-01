@@ -3,9 +3,7 @@
 
 name: develop CI
 
-on:
-  pull_request:
-    branches: [ develop ]
+on: pull_request
 
 jobs:
   build:
