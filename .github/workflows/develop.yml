@@ -52,4 +52,4 @@ jobs:
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         username: Github Actions (Topic)
-        status: ${{ needs.result }}
+        status: ${{ needs[*].result }}
