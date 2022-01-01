@@ -6,7 +6,6 @@ name: develop CI
 on: push
 
 jobs:
-  # TODO AWSのコンテナサービス上にbuildできるようにする
   Lint:
     runs-on: ubuntu-latest
     strategy:
@@ -25,13 +24,12 @@ jobs:
     # TODO テスト追加次第、以下を実行させる
     # - run: npm run test
     
+  # TODO AWSのコンテナサービス上にbuildできるようにする
   # build:
-
   #   runs-on: ubuntu-latest
-
   #   strategy:
   #     matrix:
-  #       node-version: [12.x, 14.x, 16.x]
+  #       node-version: [16.x]
   #       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
   #   steps:
