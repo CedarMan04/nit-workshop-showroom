@@ -2,6 +2,7 @@ import { Box, Grid } from '@material-ui/core'
 import React from 'react'
 import Header from '../molecules/Header'
 import LatestWorksList from '../molecules/LatestWorksList'
+import NewsFeed from '../molecules/NewsFeed'
 import SideBar from '../molecules/SideBar'
 
 const Top = () => {
@@ -16,7 +17,12 @@ const Top = () => {
                     <SideBar />
                 </Grid>
                 <Grid item xs={7}>
-                    <LatestWorksList />
+                    <Box my={8}>
+                        <LatestWorksList />
+                    </Box>
+                    <Box>
+                        <NewsFeed />
+                    </Box>
                 </Grid>
             </Grid>
         </Box>
